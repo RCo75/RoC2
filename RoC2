@@ -1,0 +1,66 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(NECookApp());
+}
+
+class NECookApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'NECook',
+      theme: ThemeData(
+        primarySwatch: Colors.blue, // Choose your desired color theme
+      ),
+      home: NECookHomePage(),
+    );
+  }
+}
+
+class NECookHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('NECook'),
+        actions: [
+          Container(
+            width: MediaQuery.of(context).size.width * 2 / 3,
+            alignment: Alignment.centerRight,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                // Logo widget here (replace with your logo)
+                // Membership picture widget here
+              ],
+            ),
+          ),
+        ],
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Welcome to NECook',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 16),
+            Text(
+              'We want meal times to be adventurous for Any Cook. Spin the wheel to discover new delights from around the Globe, or simply shake your fridge for a great meal (our Eco friendly choice). Lack an ingredient? No problem. We have links for you to add to shopping baskets in your favorite stores, for click and collect or delivery. The world of flavor in your palm.',
+              style: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+            SizedBox(height: 16),
+            // Rest of your app's content goes here
+          ],
+        ),
+      ),
+    );
+  }
+}
